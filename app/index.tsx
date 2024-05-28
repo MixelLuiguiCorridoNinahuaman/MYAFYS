@@ -25,7 +25,7 @@ export default function HomeScreen() {
     return () => {
       unsuscribeTemperature(), unsuscribeWet();
     };
-  }, []);
+  }, []); // Solo se ejecuta una vez
 
   const calculateHabs = (sensorValue: number): number => {
     // Convertir el valor del sensor a humedad absoluta (habs)
@@ -36,7 +36,7 @@ export default function HomeScreen() {
 
   const calculateRelativeHumidity = (sensorValue: number): number => {
     // Valor máximo del sensor
-    const maxSensorValue = 1024;
+    const maxSensorValue = 1023;
 
     // Porcentaje máximo de humedad relativa
     const maxRelativeHumidity = 100;
