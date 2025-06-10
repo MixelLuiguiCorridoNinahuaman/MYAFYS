@@ -1,4 +1,6 @@
 import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Optionally import the services that you want to use
 // import {...} from "firebase/auth";
@@ -8,14 +10,20 @@ import { getDatabase } from "firebase/database";
 // import {...} from "firebase/storage";
 
 // Initialize Firebase
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAfzqvf14sll-YfxnEUUwqUvwSqbUcLSkA",
-  authDomain: "cocoa-air-conditioning.firebaseapp.com",
-  projectId: "cocoa-air-conditioning",
-  storageBucket: "cocoa-air-conditioning.appspot.com",
-  messagingSenderId: "820515014767",
-  appId: "1:820515014767:web:fc594a3ca80b1495b1259a",
+  apiKey: "AIzaSyBDSvmOLzooEXRJhGGMq_AgSsrTjMEwFsc",
+  authDomain: "monitoreo-del-cacao.firebaseapp.com",
+  databaseURL: "https://monitoreo-del-cacao-default-rtdb.firebaseio.com",
+  projectId: "monitoreo-del-cacao",
+  storageBucket: "monitoreo-del-cacao.appspot.com",
+  messagingSenderId: "404993008050",
+  appId: "1:404993008050:web:acc09732182f6b556044ab",
+  measurementId: "G-P89XX7DK56"
 };
 
-export const app = initializeApp(firebaseConfig);
-export const database = getDatabase(app);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+
+export { app, database };
